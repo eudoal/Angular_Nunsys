@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RazaModule } from './entities/razas/raza.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { RazaModule } from './entities/razas/raza.module';
     BrowserModule,
     PocionModule,
     AppRoutingModule,
-    RazaModule
+    RazaModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

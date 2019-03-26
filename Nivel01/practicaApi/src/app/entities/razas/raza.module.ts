@@ -1,12 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RazasModule } from './razas.module';
+import { RazaCardComponent } from './raza-card/raza-card.component';
+import { RazaListComponent } from './raza-list/raza-list.component';
+import { RazaDetailsComponent } from './raza-details/raza-details.component';
+import { RazasRoutingModule } from './raza-routing.module';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RazaCardComponent,
+    RazaListComponent,
+    RazaDetailsComponent
+
+  ],
   imports: [
     CommonModule,
-    RazasModule
+    RazasRoutingModule
+
   ]
 })
 export class RazaModule { }

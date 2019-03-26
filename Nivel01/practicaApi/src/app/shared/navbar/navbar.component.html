@@ -1,3 +1,14 @@
-<p>
-  navbar works!
-</p>
+<!-- Image and text -->
+<nav class="navbar navbar-light fixed-top" style="background:#F6F6F6">
+  <a class="navbar-brand" >
+    <img src="../../../assets/imgs/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    BootCamp FullStack
+  </a>
+  <div>
+
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }" class="col-md-2">Inicio</a>
+    <a  routerLink="/racelist" routerLinkActive="active" class="col-md-2">Razas</a>
+    <a routerLink="/pociones" routerLinkActive="active" class="col-md-2">Pociones</a>
+    
+  </div>
+</nav>
