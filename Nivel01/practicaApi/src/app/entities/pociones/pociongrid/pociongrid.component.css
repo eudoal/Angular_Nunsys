@@ -1,0 +1,19 @@
+@keyframes latidos {
+    from { transform: none;}
+    50% { transform: scale(1.2); }
+    to { transform: none; }
+}
+
+.imgPocion{
+    width: 50px;
+    display: inline-block;
+    animation: latidos 1s infinite;
+    transform-origin: center;
+}
+.img{
+    width: 50px;
+}
+.fondoTabla{
+    background-color: white;
+    border-radius: 5px;
+}

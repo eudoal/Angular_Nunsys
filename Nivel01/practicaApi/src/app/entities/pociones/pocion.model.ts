@@ -1,6 +1,6 @@
 export class Pocion {
-    id:number;
+    id: number;
     nombre: string;
-    descripcion:string;
-    epica:boolean;
+    descripcion: string;
+    epica: boolean;
 }

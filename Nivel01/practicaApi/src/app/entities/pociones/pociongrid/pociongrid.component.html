@@ -1,0 +1,33 @@
+<div class="container">
+  <table class=" fondoTabla table table-striped border-light  shadow text-center">
+    <thead class="bg-success">
+      <tr class="">
+        <th scope="col">ID</th>
+        <th scope="col">Pocion</th>
+        <th scope="col">Nombre</th>
+        <th class="Acciones" *ngIf="acciones" scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let pocion of listaPociones">
+      <tr>
+        <th scope="row">{{pocion.id}}</th>
+        <td><img src="http://localhost:8080/api//pociones/{{pocion.id}}/obtenerImagen/" [ngClass]="animacion(pocion)"></td>
+        <td>{{pocion.nombre}}</td>
+        <td class="Acciones" *ngIf="acciones">
+          <div >
+            <div class="btn-group mr-2">
+              <button type="button" (click)="verMas(pocion.id)" class="btn btn-primary">Ver</button>
+            </div>
+            <div class="btn-group mr-2">
+              <button type="button" class="btn btn-success">Editar</button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger">Borrar</button>
+            </div>
+          </div>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

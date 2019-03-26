@@ -1,0 +1,17 @@
+.jumboFondo{
+    background-image: url(../../../../assets/imgs/fondo-jumbotron.png);
+    background-size: cover;
+    margin-top: 7%;
+}
+
+p{
+    margin-top:10%;
+}
+.fuego{
+    position: absolute;
+    width: 200px;
+    margin-left: 22px;
+    bottom: 10.5px;
+    height: 150px;
+    border-radius: 50px;
+}

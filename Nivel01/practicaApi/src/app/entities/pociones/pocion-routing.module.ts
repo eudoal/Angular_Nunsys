@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PocionListComponent } from './pocion-list/pocion-list.component';
-import { PocionDetailComponent } from './pocion-detail/pocion-detail.component';
+import { PocionlistComponent } from './pocionlist/pocionlist.component';
+import { PociondetailComponent } from './pociondetail/pociondetail.component';
 
 const routes: Routes = [
-  {path:'pociones', component: PocionListComponent, pathMatch:'full'},
-  {path:'pocion/:id', component: PocionDetailComponent, pathMatch:'full'}
+  {path:'pociones',component:PocionlistComponent,pathMatch:'full'},
+  {path:'pocion/:id', component:PociondetailComponent,pathMatch:'full'}
 ];
 
 @NgModule({

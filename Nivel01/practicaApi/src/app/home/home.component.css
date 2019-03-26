@@ -1,6 +1,22 @@
-.fondo{
-    width: 100%;
-    height: 100%;
-    background-size:cover;
+.fondo {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../assets/imgs/fondohome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+.contenedor{
+    width: 100%;
+    height:100%;
+    background-image: url("../../assets/imgs/fondohome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.tableHome{
+    position: absolute;
+    top: 150px;
+    background-size: cover;
+    right: 10%;
+    width: 40%;
+}

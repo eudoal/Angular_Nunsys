@@ -1,0 +1,5 @@
+.jumboFondo{
+    background-image: url(../../../../assets/imgs/fondo-jumbotron.png);
+    background-size: cover;
+    margin-top: 7%;
+}
