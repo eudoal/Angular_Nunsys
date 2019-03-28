@@ -1,4 +1,6 @@
 <div class="contenedor">
-<app-pocion-grid [listaPociones]="pociones" [acciones]="true"></app-pocion-grid>
-
+    <div class="text-center mb-2">
+    <button type="button" class="shadow btn btn-primary " (click)="nuevaPocion()">Nueva Pocion</button>
+</div>
+    <app-pocion-grid [listaPociones]="pociones" [acciones]="true"></app-pocion-grid>
 </div>

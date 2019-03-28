@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pocion } from '../pocion.model';
 import { PocionService } from '../pocion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pocion-list',
@@ -9,18 +10,18 @@ import { PocionService } from '../pocion.service';
 })
 export class PocionListComponent implements OnInit {
 
-  pociones:Pocion[];
+  pociones: Pocion[];
 
-  constructor(private _pocionService: PocionService) { 
+  constructor(private router:Router, private _pocionService: PocionService) {
     this._pocionService.getAllPociones().subscribe(
-      result=>{
+      result => {
         this.pociones = result;
         console.log(this.pociones);
-        
+
       },
-      err=>{
+      err => {
         console.log("GetAllPociones" + err);
-        
+
       },
     );
   }
@@ -28,4 +29,7 @@ export class PocionListComponent implements OnInit {
   ngOnInit() {
   }
 
+  nuevaPocion(){
+    this.router.navigate(['/ficha',0])
+  }
 }

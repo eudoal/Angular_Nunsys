@@ -32,17 +32,20 @@ export class PocionGridComponent implements OnInit {
   }
 
   borrarPocion(id: number) {
-    this._pocionService.borrarPocion(id).subscribe();
-    // this._pocionService.getAllPociones().subscribe(
-    //   rest=>{
-    //     this.listaPociones = rest;
+    this._pocionService.borrarPocion(id).subscribe(
+      rest=>{
+        this.listaPociones = rest;
 
-    //   },
-    //   err=>{
-    //     console.log("err" +err);
+      },
+      err=>{
+        console.log("err" +err);
         
-    //   }
-    // );
+      }
+    );
+  }
+
+  editarPocion(id: number){
+    this.router.navigate(['/ficha',id]);
   }
 
 }
