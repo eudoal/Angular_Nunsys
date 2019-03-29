@@ -22,6 +22,9 @@ export class PocionEditComponent implements OnInit {
       }
     );
 
+  }
+
+  ngOnInit() {
     if (+this.id === 0) {
       this.pocion = new Pocion();
       this.pocion.id = 0;
@@ -34,12 +37,11 @@ export class PocionEditComponent implements OnInit {
 
       );
     }
-
   }
 
   borrarPocion(id: number) {
     this._pocionService.borrarPocion(id).subscribe(
-      rest=>{
+      result=>{
         this.router.navigate(['/pociones']);
 
       },
@@ -51,9 +53,11 @@ export class PocionEditComponent implements OnInit {
   }
 
   guardarPocion(pocion: Pocion){
-    if(pocion.id === 0){
+    if(pocion.id == 0){
       //llamamos a post
       this.pocion.imagen = this.imgURL;
+      console.log(pocion.imagen);
+      
       this._pocionService.insertarPocion(pocion).subscribe(
         result=>{
           this.router.navigate(['/pociones']);
@@ -64,6 +68,10 @@ export class PocionEditComponent implements OnInit {
       );
     }else{
       //llamamaos a put
+      if(this.imgURL){
+        this.pocion.imagen = this.imgURL;
+      }
+
       this._pocionService.editarPocion(pocion).subscribe(
         result=>{
           this.router.navigate(['/pociones']);
@@ -78,8 +86,7 @@ export class PocionEditComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
+
 
   preview(files) {
     if (files.length === 0) {

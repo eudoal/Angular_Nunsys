@@ -11,7 +11,7 @@
     <tbody *ngFor="let pocion of listaPociones">
       <tr>
         <th scope="row">{{pocion.id}}</th>
-        <td><img src="../../../../assets/imgs/escudos/horde.png" [ngClass]="animacion(pocion.esEpica)"></td>
+        <td><img [src]="pocion.imagen" [ngClass]="animacion(pocion.esEpica)"></td>
         <td>{{pocion.titulo}}</td>
         <td class="Acciones" *ngIf="acciones">
           <div >
